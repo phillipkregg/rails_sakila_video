@@ -8,7 +8,7 @@
    database instead of creating one from scratch.  And also to be able
    to modify that existing database using Active Record and Migrations.
 
-This app also uses of both modern and historical methods of live reloading:
+**This app also uses of both modern and historical methods of live reloading:**
 
 Since this app is using Webpacker, it makes use of the `./bin/webpack-dev-server` in order to rebuild the JavaScript files upon changes.
 
@@ -18,6 +18,12 @@ In order to reload `html.erb` upon changes, we are using `rack-livereload` along
 
 Normally this would require several terminals to be open at once, but this app uses the **Overmind** process manager along with a `Procfile.dev` to run all 3 commands at once.
 
-This app is able to reload changes in SCSS, JavaScript, and ERB files all within one console command: `overmind s`instead of `rails s`
+**
+
+## This app is able to reload changes in SCSS, JavaScript, and ERB files all within one console command: `overmind s` instead of `rails s`
+
+`**
 
 This also means the application will start on port `5000` instead of `3000`.
+
+Special thanks to Vincent Voyer for this incredible setup guide: [https://dev.to/vvo/a-rails-6-setup-guide-for-2019-and-2020-hf5](https://dev.to/vvo/a-rails-6-setup-guide-for-2019-and-2020-hf5)
