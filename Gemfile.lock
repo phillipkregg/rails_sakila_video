@@ -90,6 +90,7 @@ GEM
       http_parser.rb (~> 0.6.0)
     erubi (1.9.0)
     eventmachine (1.2.7)
+    eventmachine (1.2.7-java)
     ffi (1.12.2)
     ffi (1.12.2-java)
     formatador (0.2.5)
@@ -111,6 +112,7 @@ GEM
       guard-compat (~> 1.0)
       multi_json (~> 1.8)
     http_parser.rb (0.6.0)
+    http_parser.rb (0.6.0-java)
     i18n (1.8.2)
       concurrent-ruby (~> 1.0)
     jaro_winkler (1.5.4)
@@ -160,9 +162,9 @@ GEM
       method_source (~> 0.9.0)
       spoon (~> 0.0)
     public_suffix (4.0.4)
-    puma (4.3.3)
+    puma (4.3.5)
       nio4r (~> 2.0)
-    puma (4.3.3-java)
+    puma (4.3.5-java)
       nio4r (~> 2.0)
     rack (2.2.2)
     rack-livereload (0.3.17)
@@ -312,7 +314,7 @@ DEPENDENCIES
   mysql2
   prettier
   pry (~> 0.12.2)
-  puma (~> 4.1)
+  puma (~> 4.3)
   rack-livereload
   rails (~> 6.0.2, >= 6.0.2.1)
   rubocop
