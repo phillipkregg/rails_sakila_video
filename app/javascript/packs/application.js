@@ -21,6 +21,9 @@ import "controllers"
 import 'jquery'
 import 'popper.js'
 import 'bootstrap'
+import 'jquery.easing'
+import 'magnific-popup'
+require("magnific-popup/src/css/main")
 import 'css/site'
 import flatpickr from 'flatpickr'
 require("flatpickr/dist/flatpickr.css")
@@ -31,4 +34,13 @@ document.addEventListener("turbolinks:load", () => {
     altFormat: "F j, Y",
     dateFormat: "Y-m-d"
   })
+})
+
+import theme from './theme'
+
+window.jQuery = $;
+window.$ = $;
+
+$(document).ready(function () {
+  theme(window.jQuery);
 })
