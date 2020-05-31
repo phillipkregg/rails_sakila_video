@@ -1,0 +1,11 @@
+@import "node_modules/bootstrap/scss/functions";
+@import "node_modules/bootstrap/scss/variables";
+
+// sass variable overrides
+// $body-bg: $gray-700;
+// $body-color: white;
+
+
+@import "~bootstrap/scss/bootstrap.scss";
+
+@import "./theme";

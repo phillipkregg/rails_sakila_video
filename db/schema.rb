@@ -10,18 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_04_26_012416) do
+ActiveRecord::Schema.define(version: 2020_05_30_221149) do
 
   create_table "actor", primary_key: "actor_id", id: :integer, limit: 2, unsigned: true, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.string "first_name", limit: 45, null: false
     t.string "last_name", limit: 45, null: false
     t.timestamp "last_update", default: -> { "CURRENT_TIMESTAMP" }, null: false
     t.index ["last_name"], name: "idx_actor_last_name"
-  end
-
-  create_table "actors", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
   end
 
 # Could not dump table "address" because of following StandardError
@@ -119,6 +114,13 @@ ActiveRecord::Schema.define(version: 2020_04_26_012416) do
     t.index ["customer_id"], name: "idx_fk_customer_id"
     t.index ["rental_id"], name: "fk_payment_rental"
     t.index ["staff_id"], name: "idx_fk_staff_id"
+  end
+
+  create_table "posts", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
+    t.string "title"
+    t.date "publish_date"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "rental", primary_key: "rental_id", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|

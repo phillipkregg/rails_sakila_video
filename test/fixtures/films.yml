@@ -1,0 +1,25 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  description: MyText
+  release_year: 
+  language_id: 
+  original_language_id: 
+  rental_duration: 
+  length: 
+  replacement_cost: 9.99
+  rating: MyString
+  special_features: MyText
+
+two:
+  title: MyString
+  description: MyText
+  release_year: 
+  language_id: 
+  original_language_id: 
+  rental_duration: 
+  length: 
+  replacement_cost: 9.99
+  rating: MyString
+  special_features: MyText
