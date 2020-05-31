@@ -8,8 +8,7 @@ default: &default
   adapter: mysql2
   #pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   database: <%= Rails.application.credentials.dig(:mysql_database) %>
-  #user: <%= Rails.application.credentials.dig(:mysql_username) %>
-  username: 'root'
+  username: <%= Rails.application.credentials.dig(:mysql_username) %>
   password: <%= Rails.application.credentials.dig(:mysql_password) %>  
   timeout: 5000
   
