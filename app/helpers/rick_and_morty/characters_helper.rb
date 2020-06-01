@@ -1,0 +1,2 @@
+module RickAndMorty::CharactersHelper
+end

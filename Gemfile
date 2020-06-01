@@ -45,6 +45,7 @@ group :development do
   gem 'listen', '>= 3.0.5', '< 3.2'
   gem 'rack-livereload'
   gem 'rubocop'
+  gem 'solargraph'
   gem 'web-console', '>= 3.3.0'
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
@@ -67,4 +68,7 @@ end
 gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 
 # My custom gem addons
-gem 'solargraph', group: :development
+gem 'active_model_serializers'
+gem 'faraday'
+gem 'faraday_middleware'
+gem 'json'

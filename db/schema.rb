@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_05_30_221149) do
+ActiveRecord::Schema.define(version: 2020_05_31_171637) do
 
   create_table "actor", primary_key: "actor_id", id: :integer, limit: 2, unsigned: true, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.string "first_name", limit: 45, null: false
@@ -134,6 +134,16 @@ ActiveRecord::Schema.define(version: 2020_05_30_221149) do
     t.index ["inventory_id"], name: "idx_fk_inventory_id"
     t.index ["rental_date", "inventory_id", "customer_id"], name: "rental_date", unique: true
     t.index ["staff_id"], name: "idx_fk_staff_id"
+  end
+
+  create_table "rick_and_morty_characters", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
+    t.string "name"
+    t.string "status"
+    t.string "species"
+    t.string "type"
+    t.string "image"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "staff", primary_key: "staff_id", id: :integer, limit: 1, unsigned: true, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|

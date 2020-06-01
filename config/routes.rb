@@ -1,10 +1,19 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
-  get 'films/index'
+  root 'home#index'
   resources :posts
   resources :films
-  root 'home#index'
-  # get 'home/index'
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+
+  get 'films/index'
+  namespace :rick_and_morty do
+    # get 'characters', to: 'characters#index'
+    resources :characters
+  end
+
+  match '/curl_example' => 'rick_and_morty/characters#curl_get_example', via: :get
+  match '/curl_example' => 'rick_and_morty/characters#curl_post_example', via: :post
+
+  match '/request' => 'rick_and_morty/characters#create', via: :post
+  match '/request' => 'rick_and_morty/characters#create', via: :get
 end
