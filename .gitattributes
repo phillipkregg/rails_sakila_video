@@ -3,3 +3,4 @@
 
 * linguist-vendored
 *.css linguist-vendored=false
+*.ruby linguist-vendored=true
