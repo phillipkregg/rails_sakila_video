@@ -1,3 +1,6 @@
+*.css linguist-detectable=false
+*.js linguist-detectable=true
+*.ruby linguist-detectable=true
 
 * linguist-vendored
 *.css linguist-vendored=false
